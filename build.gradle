@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+//        mavenLocal()
+        maven {url SDK_REPOSITORY_URL
+            credentials {
+                username = SDK_REPOSITORY_USERNAME
+                password = SDK_REPOSITORY_PASSWORD
+            }
+        }
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath "com.taobao.android.gradle:emas-plugin:1.7.2-SNAPSHOT"
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories{
+        //    mavenLocal()
+        maven{ url SDK_REPOSITORY_URL
+            credentials {
+                username = SDK_REPOSITORY_USERNAME
+                password = SDK_REPOSITORY_PASSWORD
+            }
+        }
+        maven{
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+        maven{
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+
+
+        //这里不同于内网 这里要加上这个发布BundleMaven仓库 非常重要
+        maven {url "http://" + CUSTOM_REPOSITORY_HOST + "/repository/maven-public/"}
+
+//    maven { url "xxx" }  //业务模块aar/awb release仓库地址（体验时可填POC产物仓库release地址）
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

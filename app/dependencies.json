@@ -1,0 +1,15 @@
+{
+
+  "main": [
+
+    {
+      "artifact":"MyFirstBundle",
+      "type":"awb",
+      "version":"1.0.0-SNAPSHOT",
+      "group":"com.taobao.android.test"
+    }
+
+
+  ],
+  "other": []
+}

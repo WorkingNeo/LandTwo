@@ -3,12 +3,17 @@
   "main": [
 
     {
+      "artifact":"FirstBundle",
+      "type":"awb",
+      "version":"1.0.1-SNAPSHOT",
+      "group":"com.taobao.android"
+    },
+    {
       "artifact":"MyFirstBundle",
       "type":"awb",
       "version":"1.0.0-SNAPSHOT",
       "group":"com.taobao.android.test"
     }
-
 
   ],
   "other": []

@@ -16,9 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void toMyFirst(View view) {
         Log.e("SSSSSSSS","=======toMyFirst========");
-        Intent intent = new Intent();
-        intent.putExtra("Value1","第1111个参数");
-        intent.setClassName(MainActivity.this, "com.neo.firstlibrary.MainFirstActivity");
-        startActivity(intent);
+        try {
+            Intent intent = new Intent();
+            intent.putExtra("Value1","第1111个参数");
+            intent.setClassName(MainActivity.this, "com.neo.firstlibrary.MainFirstActivity");
+//            intent.setClassName(MainActivity.this, "com.taobao.firstbundle.FirstBundleActivity");
+            startActivity(intent);
+        } catch (Throwable throwable) {
+            Log.e("testError", "toMyFirst: ", throwable);
+        }
     }
 }

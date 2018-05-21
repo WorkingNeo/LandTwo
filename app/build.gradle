@@ -55,6 +55,26 @@ android {
         javaMaxHeapSize = "768m"
         additionalParameters = ["--no-strict"]
     }
+
+
+
+
+    signingConfigs {
+        debug {
+            storeFile file('landtwo.jks')
+            storePassword '123456'
+            keyAlias 'landtwo'
+            keyPassword '123456'
+        }
+
+        release {
+            storeFile file('landtwo.jks')
+            storePassword '123456'
+            keyAlias 'landtwo'
+            keyPassword '123456'
+        }
+    }
+
 }
 
 dependencies {

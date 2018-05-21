@@ -66,20 +66,27 @@ public class EmasInit {
     public static final int RELEASE = 2;  //发布环境
 
     /*配置信息*/
-    protected String mAppkey = "10000039";//"10000066";//"10000039";//"10000078";//"60039748";
-    protected String mAppSecret = "c7795717b2306055f21fb33418c1d011";//"1426c10c5ce57d6cb29e016a816421a7";//"c7795717b2306055f21fb33418c1d011";//"2e00a7e9ab2048daabd4977170d37c4a";//"ab5ff148782b467bb0b310c4acd70abd"//"fe240d4b8f4b31283863cc9d707e2cb1"
-    protected String mZcachePrefix = "http://mobilehubdev.taobao.com/eweex/";
-    protected String mAccsHost = "acs.emas-ha.cn";
-    protected Map<String, String> mIPStrategy;
-    protected String mMtopHost = "aserver.emas-ha.cn";
-    protected String mAdashHost = "adash.emas-ha.cn";
-    protected String mHAOssBucket = "ha-remote-log";
-    protected String mHAPubKey;
-    protected String mStartActivity = "com.taobao.demo.WelcomActivity";
-    protected String mTTid = "1001@DemoApp_Android_" + BuildConfig.VERSION_NAME;
-    protected boolean mUseHttp = true;
+    private String mAppkey = "20000174";//"10000066";//"10000039";//"10000078";//"60039748";
+    private String mAppSecret = "b24dd2b051478addf3bc9d9f229bac56";//"1426c10c5ce57d6cb29e016a816421a7";//"c7795717b2306055f21fb33418c1d011";//"2e00a7e9ab2048daabd4977170d37c4a";//"ab5ff148782b467bb0b310c4acd70abd"//"fe240d4b8f4b31283863cc9d707e2cb1"
 
-    protected int mEnv = DEBUG;
+    private String mZcachePrefix = "http://publish-poc.emas-ha.cn/eweex/";
+    private String mAccsHost = "emaspoc-acs.emas-ha.cn";
+    private Map<String, String> mIPStrategy;
+    private String mMtopHost = "emaspoc-aserver.emas-ha.cn";
+    private String mAdashHost = "emaspoc-adash.emas-ha.cn";
+    private String mHAOssBucket = "emas-ha-remote-log-poc";
+    private String mHAPubKey;
+    private String mStartActivity = "com.taobao.demo.WelcomActivity";
+    private String mTTid = "1001@DemoApp_Android_" + BuildConfig.VERSION_NAME;
+    private boolean mUseHttp = false;
+    protected int mEnv = RELEASE;
+
+
+
+
+
+
+
 
     private Application mApplication;
     private static final String TAG = "EmasInit";

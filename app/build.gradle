@@ -29,6 +29,25 @@ task wrapper(type: Wrapper) {
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
+
+
+    signingConfigs {
+        debug {
+            storeFile file('landtwo.jks')
+            storePassword '123456'
+            keyAlias 'landtwo'
+            keyPassword '123456'
+        }
+
+        release {
+            storeFile file('landtwo.jks')
+            storePassword '123456'
+            keyAlias 'landtwo'
+            keyPassword '123456'
+        }
+    }
+
+
     defaultConfig {
         applicationId "com.neo.landtwo"
         minSdkVersion 15
@@ -47,6 +66,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
         }
     }
 
@@ -59,21 +80,7 @@ android {
 
 
 
-    signingConfigs {
-        debug {
-            storeFile file('landtwo.jks')
-            storePassword '123456'
-            keyAlias 'landtwo'
-            keyPassword '123456'
-        }
 
-        release {
-            storeFile file('landtwo.jks')
-            storePassword '123456'
-            keyAlias 'landtwo'
-            keyPassword '123456'
-        }
-    }
 
 }
 

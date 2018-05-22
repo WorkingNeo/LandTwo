@@ -140,7 +140,8 @@ dependencies {
 
 
 
-group = 'com.taobao.android.test'
+//group = 'com.taobao.android.test'
+group = 'com.neo.landtwo'
 version = android.defaultConfig.versionName + '-SNAPSHOT'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
